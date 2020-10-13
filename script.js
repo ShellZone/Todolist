@@ -11,14 +11,26 @@ todoButton.addEventListener('click', addTodo);
 //Functions
 
 function addTodo(event){
-    console.log('hello');
     //Prevent form from submitting 
-    Event.preventDefault();
-    const todoDiv = document.createElement('div');
-    todoDiv.classList.add('todo');
+    event.preventDefault();
+    //Todo DIV
+    const todoDiv = document.createElement("div");
+    todoDiv.classList.add("todo");
     //Create LI
-    const newTodo = document.createElement('li');
-    newTodoinnerText = 'hey';
-    newTodo.classList.add('todo-item');
+    const newTodo = document.createElement("li");
+    newTodo.innerText = "hey";
+    newTodo.classList.add("todo-item");
     todoDiv.appendChild(newTodo);
+    //CHECK MARK BUTTON
+    const completedButton = document.createElement("button");
+    completedButton.innerHTML = '<i class="fas fa-check"></i>';
+    completedButton.classList.add("complete-btn");
+    todoDiv.appendChild(completedButton);
+    //CHECK TRASH BUTTON
+    const trashButton = document.createElement('button');
+    trashButton.innerHTML = '<i class="fas fa-trash"></i>';
+    trashButton.classList.add("complete-btn");
+    todoDiv.appendChild(trashButton);
+    //APPEND TO LIST
+    todoList.appendChild(todoDiv);
 }

@@ -51,4 +51,4 @@ function addTodo(event){
         const todo = item.parentElement;
         todo.classList.toggle("completed");
     }
-    }
+}

@@ -42,13 +42,17 @@ function addTodo(event){
         //DELETE TODO
         if(item.classList[0]=== "trash-btn"){
         const todo = item.parentElement;
-        todo.remove();
+        // If deletes adds fall animation
+        todo.classList.add("fall");
+        todo.addEventListener("transitionend", function(){
+            todo.remove();
+    });
     }
-
     //CHECK MARK
 
     if(item.classList[0]=== "complete-btn"){
         const todo = item.parentElement;
         todo.classList.toggle("completed");
     }
-}
+    }
+

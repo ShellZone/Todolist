@@ -1,139 +1,140 @@
-*{
-    margin:0;
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-
-body{
-    /* background-image: linear-gradient(120deg, #f6d365,  #fda085); */
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 25%, rgba(6,84,170,1) 59%, rgba(0,212,255,1) 100%);
+  }
+  body {
+    background-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 25%, rgba(7,51,148,1) 43%, rgba(6,84,170,1) 59%, rgba(0,212,255,1) 100%);
     color: white;
-    font-family: 'Poppins';
+    font-family: "Poppins", sans-serif;
     min-height: 100vh;
-}
-
-header {
-    font-size: 1.5rem;
-}
-
-header, form {
-    min-height: 25vh;
+  }
+  header {
+    font-size: 2rem;
+  }
+  
+  header,
+  form {
+    min-height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-form input, form button{
-    padding: 0;
+  }
+  form input,
+  form button {
+    padding: 0.5rem;
     font-size: 2rem;
     border: none;
     background: white;
-}
-
-form button{
-    color: #d88771;
-    background: white;
+  }
+  form button {
+    color: #5947ff;
+    background: #f7fffe;
     cursor: pointer;
     transition: all 0.3s ease;
-    width: 33px;
-}
-
-form button:hover{
-    background: #d88771;
+  }
+  form button:hover {
+    background: #47fff0;
     color: white;
-}
-
-.todo-container {
+  }
+  .todo-container {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.todo-list{
+  }
+  
+  .todo-list {
     min-width: 30%;
     list-style: none;
-}
-
-.todo {
+  }
+  
+  .todo {
     margin: 0.5rem;
     background: white;
+    font-size: 1.5rem;
     color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: all 0.5s ease;
-
-}
-
-.todo li {
+    transition: all 1s ease;
+  }
+  .filter-todo {
+    padding: 1rem;
+  }
+  .todo li {
     flex: 1;
-}
-
-.trash-btn,
-.complete-btn {
-    background: rgb(30, 42, 210);
-    color: rgb(220, 117, 20);
+  }
+  
+  .trash-btn,
+  .complete-btn {
+    background: #5947ff;
+    color: white;
     border: none;
+    padding: 1rem;
     cursor: pointer;
     font-size: 1rem;
-    padding: 1rem;
-}
-
-.complete-btn {
-    background: #1747ca;
-}
-
-.todo-item {
+  }
+  .complete-btn {
+    background: rgb(11, 212, 162);
+  }
+  .todo-item {
     padding: 0rem 0.5rem;
-}
-
-.fa-trash, .fa-check {
+  }
+  
+  .fa-trash,
+  .fa-check {
     pointer-events: none;
-}
-
-.completed{
- text-decoration: line-through;
- opacity: 0.5;
-}
-
-.fall{
-    transform: translateY(8rem) rotateZ(20deg);
-    opacity: 0;  
-} 
-
-select{
+  }
+  
+  .fall {
+    transform: translateY(10rem) rotateZ(20deg);
+    opacity: 0;
+  }
+  
+  .completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
+  
+  /*CUSTOM SELECTOR */
+  select {
     -webkit-appearance: none;
     -moz-appearance: none;
+    -ms-appearance: none;
     appearance: none;
-    outline: none;
-    border: none;
-}
-
-.select{
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background-image: none;
+  }
+  
+  /* Custom Select */
+  .select {
     margin: 1rem;
     position: relative;
-    overflow: hidden;    
-}
-
-select{
-    color: #ff6f47;
-    width: 10rem;
+    overflow: hidden;
+  }
+  select {
+    color: #2b57cf;
+    font-family: "Poppins", sans-serif;
     cursor: pointer;
-    padding: 1rem;
-    position: relative;
-    left: 15px;
-
-    
-}
-
-.select::after{
+    width: 12rem;
+  }
+  /* Arrow */
+  .select::after {
     content: "\25BC";
     position: absolute;
-    background: #ff6f47;
     top: 0;
     right: 0;
     padding: 1rem;
+    background: #5947ff;
+    cursor: pointer;
     pointer-events: none;
-}
+  }
+  /* Transition */
+  /*
+  .select:hover::after {
+    transform: scale(1.5);
+  }
+  */
+  
